@@ -19,7 +19,9 @@ function Login() {
       [name]: value
     }));
   }
-
+  const handleCreateAccount = () => {
+    navigate('/signup');
+  };
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -31,9 +33,6 @@ function Login() {
 
     // If everything is valid, navigate to the home page (or wherever)
     navigate("/home");
-    function handleCreateAccount(){
-      navigate('/signup');
-    };
   };
   return (
     <div>
