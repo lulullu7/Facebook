@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+
+
+}
+
+// variables
+$primary-blue: #0e67da;
+$input-border: #ccd0d5;
+$bg-color: #f0f2f5;
+$card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+// function
+@mixin alignflex($dir: row, $align: center, $just: center) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $just ;
+}
+
+.inner_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+
+
+  
+
+  .signup_box_top {
+    background: white;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: 1px solid $input-border;
+    width: 400px;
+    @include alignflex(column, center, end);
+
+    h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 5px 0 15px;
+    }
+  }
+
+  .signup_box_bottom {
+    background: white;
+    padding: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: $card-shadow;
+    width: 400px;
+    @include alignflex(column, center, center);
+
+    .signup_box_bottom_form {
+      display: flex;
+      flex-direction: column;
+
+      .signup_box_bottom_row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        .signup_box_bottom_input {
+          flex: 1;
+          padding: 8px;
+          border: 1px solid $input-border;
+          border-radius: 4px;
+          @include alignflex(row, center, space-between);
+          font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+        }
+
+        .signup_box_bottom_select {
+          flex: 1;
+          padding: 8px;
+          border: 1px solid $input-border;
+          border-radius: 4px;
+        }
+
+        .signup_box_bottom_gender {
+          height: 35px;
+          width: 125px;
+          border: 1px solid $input-border;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+        }
+      }
+      .signup_box_bottom_input_email {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid $input-border;
+        border-radius: 4px;
+      }
+      .signup_box_bottom_input_password{
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid $input-border ;
+        border-radius: 4px;
+      }
+      .signup_box_bottom_info{
+        font-size: 11px;
+        color: #555;
+        margin-bottom: 10px;
+      }
+      a{
+        color: $primary-blue;
+      }
+      .signup_btn {
+        position: relative;
+        left: 25%;
+        width: 50%;
+        background-color: #42b72a;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      .login_link{
+        color: $primary-blue;
+        text-align: center;
+        font-size: 14px;
+        text-decoration: none;
+      }
+    }
+  }
+}
