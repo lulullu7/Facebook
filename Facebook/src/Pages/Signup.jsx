@@ -36,6 +36,7 @@ function Signup() {
   }
     navigate("/");
   };
+  
 
   return (
     <div>
